@@ -88,15 +88,15 @@ function Vote() {
   const hasUserVoted = picks ? picks.votes.some((vote) => vote.userId === id) : false;
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <div>
+    <div className="voting" >
+      <div className="voting-block">
         <h1>Vote</h1>
         {!voted ? (
           hasUserVoted ? (
             <div>VOTED</div>
           ) : currentSongs.length > 0 ? (
             currentSongs.map((song) => (
-              <div key={song.id} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+              <div key={song.id}  className="voting-row">
                 <h2>{song.song.name} by {song.song.artist}</h2>
                 <button style={{ marginLeft: '10px' }} onClick={() => handleVote(song.id)}>Vote</button>
               </div>

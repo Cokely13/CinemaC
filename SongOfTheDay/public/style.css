@@ -1093,3 +1093,23 @@ button[type='submit']:hover {
     display: block; /* Change the display property to block to center the link */
     text-align: center; /* Center the text horizontally */
   }
+
+  .voting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .voting-block{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+
+  .voting-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }

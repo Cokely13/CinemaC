@@ -3755,19 +3755,12 @@ function Vote() {
   };
   const hasUserVoted = picks ? picks.votes.some(vote => vote.userId === id) : false;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh'
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Vote"), !voted ? hasUserVoted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "VOTED") : currentSongs.length > 0 ? currentSongs.map(song => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "voting"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "voting-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Vote"), !voted ? hasUserVoted ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "VOTED") : currentSongs.length > 0 ? currentSongs.map(song => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     key: song.id,
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      marginBottom: '10px'
-    }
+    className: "voting-row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, song.song.name, " by ", song.song.artist), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     style: {
       marginLeft: '10px'
